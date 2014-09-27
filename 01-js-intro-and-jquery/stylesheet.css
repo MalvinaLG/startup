@@ -1,0 +1,87 @@
+/*
+ 	Globant - BootCamp 2014 Bahia Blanca
+	Topic1: JavaScript Intro and jQuery
+
+ 	Author: Malvina Lopez Gherbi
+*/
+
+* {
+  text-align: center;
+}
+
+body {
+  padding-left: 5%;
+  padding-right: 5%;
+  font: 12px sans-serif, Verdana, Arial, Tahoma;
+  background-color: #FFE4E1;
+}
+
+header, h3 {
+  font-weight: bold;
+  color: #A52A2A;
+}
+
+.section1 {
+  float: left;
+  position: relative;
+  padding: 1%;
+  width: 30%;
+}
+
+.section2 {
+  display: none;
+  float: left;
+  padding: 1%;
+  width: 100%;	
+  height: 180px;
+  background-color: #FFFAFA;
+  border: 2px solid #A52A2A;
+}
+
+.alias{
+  width:85%;
+}
+
+.section3 {
+  float: right;
+  width: 60%;
+}
+
+.section4 {
+  float: right;
+  height: 500px;
+  width: 60%;
+  background-color: #FFFAFA;
+  border: 2px solid #A52A2A;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.tableTweets {
+  width: 100%;
+}
+
+td {
+  padding: 2px;
+}
+
+.expose {
+  position: relative;
+}
+
+#overlay {
+  background-color: rgba(0,0,0,0.3);
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

@@ -1,0 +1,66 @@
+/*
+ 	Globant - BootCamp 2014 Bahia Blanca
+	Topic2: Design Patterns and OOP in JavaScript
+
+ 	Author: Malvina Lopez Gherbi
+*/
+
+* {
+  text-align: center;
+}
+
+body {
+  padding-left: 10%;
+  padding-right: 10%;
+  font: 12px sans-serif, Verdana, Arial, Tahoma;
+  background-color: #F5F5F5;
+}
+
+header, h3 {
+  font-weight: bold;
+  color: #483D8B;
+}
+
+#section1 {
+  float: left;
+  position: relative;
+  padding: 1%;
+  width: 40%;  
+  height: 180px;
+  border: 2px solid #483D8B;
+}
+
+#section2 {
+  float: right;
+  padding: 1%;
+  width: 40%;
+  height: 180px;
+  border: 2px solid #483D8B;
+}
+
+
+#divPlayer {
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 2px solid #000000;
+  background-color: #000000;
+  color: #F5F5F5;
+  font-weight: bold;
+  width: 90%;
+  height: 30%;
+}
+
+#divSocial {
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #483D8B;
+  font-weight: bold;
+  width: 90%;
+  height: 30%;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

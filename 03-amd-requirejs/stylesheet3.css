@@ -1,0 +1,46 @@
+/*
+ 	Globant - BootCamp 2014 Bahia Blanca
+	Topic 3: AMD + RequireJS
+
+ 	Author: Malvina Lopez Gherbi
+*/
+
+* {
+  text-align: center;
+}
+
+body {
+  padding-left: 10%;
+  padding-right: 10%;
+  font: 12px sans-serif, Verdana, Arial, Tahoma;
+  background-color: #F5F5F5;
+}
+
+header, h3 {
+  font-weight: bold;
+  color: #4682B4;
+}
+
+#section1 {
+  float: left;
+  position: relative;
+  padding: 1%;
+  width: 80%;  
+  height: 180px;
+  border: 2px solid #4682B4;
+}
+
+#divQuotes {
+  padding-left: 5%;
+  padding-right: 5%;
+  color: #000000;
+  font-weight: bold;
+  width: 90%;
+  height: 70%;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

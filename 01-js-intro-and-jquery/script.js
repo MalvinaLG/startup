@@ -31,26 +31,32 @@ $(document).ready(function() {
 	$("#button1").click(function() {
 
     var name = $("#textbox1").val();
+    var $divResponse = $("#divResponse");
 
     if(name != "") {
 
 		  $.post("http://bootcamp.aws.af.cm/welcome/"+name, function(data) {
- 			
-        $("#divResponse").css({"color":"black", "font-weight":"bold", "font-size":"14px"});	
-        $("#divResponse").html(highlightName(data.response));
+ 				
+        $divResponse.removeClass("divError");
+        $divResponse.addClass("divSuccess");
+        $divResponse.html(highlightName(data.response));
 
       })
       
   	  .fail(function() {
-        $("#divResponse").css({"color":"red", "font-weight":"normal", "font-size":"12px"});
-			  $("#divResponse").html("Request failed: Server error");
+
+        $divResponse.removeClass("divSuccess");
+        $divResponse.addClass("divError");
+			  $divResponse.html("Request failed: Server error");
         $("#textbox1").focus();
 			  
  		  });  	
     }
     else {
-      $("#divResponse").css({"color":"red", "font-weight":"normal", "font-size":"12px"});
-      $("#divResponse").html("Name missing!");
+
+      $divResponse.removeClass("divSuccess");
+      $divResponse.addClass("divError");
+      $divResponse.html("Name missing!");
       $("#textbox1").focus();
     }
 
@@ -83,10 +89,12 @@ $(document).ready(function() {
   	url: "http://tweetproxy.ap01.aws.af.cm/search",
   	data: "q=html5",
   	success: function(listTweets) {
+
+      var $tableTweets = $(".tableTweets");
   				
   		$.each(listTweets.statuses,function(key, value) {
 
-  			$(".tableTweets").append("<tr><td>"
+  			$tableTweets.append("<tr><td>"
   			  + "<img src=\"" + value.user.profile_image_url + "\">" + "</td>"	
   				+ "<td>" + value.user.name.fontcolor("maroon").bold() + " "
           + "@" + value.user.screen_name + "<br>"

@@ -1,0 +1,32 @@
+{
+
+  "profiles":  [
+    {
+      "firstName": "Walter",
+      "lastName": "White",
+      "image": "scripts/walter-white.jpg",
+      "actualOcupation": "Crystal Meth Manufacturer and Co-Owner",
+      "actualJob": "A1A Car Wash",
+      "yearsActualJob": "2009 - Present (2011)",
+      "locationNow": "Albuquerque, New Mexico, USA",
+      "education": "California Institute of Technology (Caltech)",
+      "jobs":
+      [{
+        "years": "1991 - 2009",
+        "ocupation": "Chemistry Teacher",
+        "job": "J. P. Wynne High School "
+      },
+      {
+        "years": "1990 - 1991",
+        "ocupation": "Chemist",
+        "job": "Sandia Laboratories"
+      },
+      {
+        "years": "1989 - 1990",
+        "ocupation": "Co-Founder",
+        "job": "Gray Matter Technologies"             
+      }]
+    }
+  ]
+
+}

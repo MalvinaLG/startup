@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet4.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+    <script src="libs/jquery-2.1.1.js"></script>
+    <script src="libs/handlebars-v2.0.0.js"></script> 
+    <script src="libs/underscore.js"></script>
+    <script src="libs/dust-full-0.3.0.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <title>Globant - BootCamp 2014 - Topic 4</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>BootCamp 2014 - Topic 4: Template Engines</h1>
+    </header>
+
+    <section id="section1">
+    
+      <h2>Loaded with template engine: Handlebars</h2>
+
+      <div id="divSection1"></div>
+
+      <script type="text/x-handlebars-template" id="templateH">
+
+        {{#profiles}}
+          <table class="tableProfile">
+            <tr>
+              <td><img src="{{image}}" alt="imgProfile"></td>
+              <td><h1>{{firstName}} {{lastName}}</h1>
+                <h3>{{actualOcupation}} at {{actualJob}}</h3>
+                {{yearsActualJob}} <br>
+                {{locationNow}}</td>
+            </tr>
+          </table>
+          <h3>Education:</h3> {{education}}
+          <h3>Work experiencie:</h3>
+          <ul>
+          {{#jobs}} <h4>{{ocupation}} at {{job}}</h4> {{years}}<br> {{/jobs}}
+          </ul>
+        {{/profiles}}
+
+      </script>
+
+    </section>
+
+    <br>
+
+    <section id="section2">
+    
+      <h2>Loaded with template engine: Underscore</h2>
+
+      <div id="divSection2"></div>
+
+      <script type="text/template" id="templateU">
+
+        <% var i; for(i=0; i<profiles.length;i++) { %>
+          <%var profile = profiles[i];%>
+          <table class="tableProfile">
+            <tr>
+              <td><img src="<%=profile.image%>" alt="imgProfile"></td>
+              <td><h1><%=profile.firstName%> <%=profile.lastName%></h1>
+                <h3><%=profile.actualOcupation%> at <%=profile.actualJob%></h3>
+                <%=profile.yearsActualJob%> <br>
+                <%=profile.locationNow%></td>
+            </tr>
+          </table>
+          <h3>Education:</h3> <%=profile.education%>
+          <h3>Work experiencie:</h3>
+          <ul>
+          <% var j,job;%>
+          <%for(j=0; j<profile.jobs.length;j++) { %>
+            <%jobP = profile.jobs[j];%>
+            <h4><%=jobP.ocupation%> at <%=jobP.job%></h4> <%=jobP.years%><br><% } %>
+          </ul><% } %>
+
+      </script>
+
+    </section>
+
+    <br>
+
+    <section id="section3">
+    
+      <h2>Loaded with template engine: {dust}</h2>
+
+      <div id="divSection3"></div>
+
+      <script type="text/template" id="templateD">
+
+        {#profiles}
+          <table class="tableProfile">
+            <tr>
+              <td><img src="{image}" alt="imgProfile"></td>
+              <td><h1>{firstName} {lastName}</h1>
+                <h3>{actualOcupation} at {actualJob}</h3>
+                {yearsActualJob} <br>
+                {locationNow}</td>
+            </tr>
+          </table>
+          <h3>Education:</h3> {education}
+          <h3>Work experiencie:</h3>
+          <ul>
+          {#jobs} <h4>{ocupation} at {job}</h4> {years}<br> {/jobs}
+          </ul>
+        {/profiles}
+      </script>
+
+    </section>
+
+    <br>
+    <footer>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+          alt="Valid CSS!" />
+        </a>
+      </p>
+    </footer>
+
+
+<!--
+  Globant - BootCamp 2014 Bahia Blanca
+  Topic 4: Template Engines
+
+  Author: Malvina Lopez Gherbi
+-->
+
+</html>

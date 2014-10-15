@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globant - BootCamp 2014 - Topic 5</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <header>
+      <h1>BootCamp 2014 - Topic 5: MVC &amp; Mixins</h1>
+    </header>
+
+    <section id="section1">
+
+      <label>Want to add a movie?</label>  <button class="btnAdd">Add New Movie</button>
+      <br>
+
+      <div id="divMovies"> </div>
+
+      <script id="movieListTemplate" type="text/template">
+        <hr>
+        <div>
+          <h2><%= title %> (<%= year %>)</h2>
+          <h4><%= duration %> min - <%= genre %></h4>
+          <h4>Director: <%= director %></h4>
+          <p>Synopsis: <%= synopsis %></p>
+        </div>
+      
+        <button class="btnEdit">Edit</button> <button class="btnRemove">Remove</button>
+
+      </script>
+
+
+      <script id="movieAddTemplate" type="text/template">
+        <hr>
+        <div>
+          <br>
+          <form id="add">
+            <label>Title</label>
+            <input id="title" type="text" /> <br>
+            <label>Year</label>
+            <input id="year" type="text" /> <br>
+            <label>Duration (min)</label>
+            <input id="duration" type="text" /> <br>
+            <label>Genre</label>
+            <input id="genre" type="text" /> <br>
+            <label>Director</label>
+            <input id="director" type="text" /> <br>
+            <label>Synopsis</label> <br>
+            <textarea id="synopsis"  rows="5" cols="50"></textarea/> <br>
+            <input type="submit" value="Save" class="btnSave" /> <button class="btnCancel">Cancel</button>
+          </form>
+   
+          <br>
+          <div id="divEmpty"></div>
+        </div>
+
+      </script>
+
+
+      <script id="movieEditTemplate" type="text/template">
+        <hr>
+        <div>
+          <br>
+          <form id="edit">
+            <label>Title</label> <input id="title" type="text" value="<%= title %>"/> <br>
+            <label>Year</label> <input id="year" type="text" value="<%= year %>"/> <br>
+            <label>Duration (min)</label> <input id="duration" type="text" value="<%= duration %>"/> <br>
+            <label>Genre</label> <input id="genre" type="text" value="<%= genre %>"/> <br>
+            <label>Director</label> <input id="director" type="text" value="<%= director %>"/> <br>
+            <label>Synopsis</label> <br>
+            <textarea id="synopsis"  rows="5" cols="50"><%= synopsis %></textarea/> <br>
+            <input type="submit" value="Save" class="btnSave" /> <button class="btnCancel">Cancel</button>
+          </form>
+
+          <br>
+          <div id="divEmpty2"></div>
+        </div>
+      </script>
+
+
+      <script src="js/lib/require.js" data-main="js/app.js"></script>
+
+    </section>
+
+    <footer>
+      <p>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+          alt="Valid CSS!" />
+        </a>
+      </p>
+    </footer>
+    
+  </body>
+
+  <!--
+  Globant - BootCamp 2014 Bahia Blanca
+  Topic 5: MVC & Mixins
+
+  Author: Malvina Lopez Gherbi
+  -->
+
+</html>

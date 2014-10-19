@@ -1,0 +1,39 @@
+/*
+ 	Globant - BootCamp 2014 Bahia Blanca
+	Topic 6: HTML5 APIs
+
+ 	Author: Malvina Lopez Gherbi
+*/
+
+
+body {
+  padding-left: 10%;
+  padding-right: 10%;
+  font: 12px sans-serif, Verdana, Arial, Tahoma;
+  background-color: #F5F5F5;
+}
+
+header, h2 {
+  font-weight: bold;
+  color: #4682B4;
+  text-align: center;
+}
+
+#section1, #section2 {
+  float: left;
+  position: relative;
+  padding: 1%;
+  width: 100%;
+  border: 2px solid #4682B4;
+  text-align: left;
+  margin: 5px;
+}
+
+footer {
+  float: left;
+  position: relative;
+  padding: 1%;
+  width: 100%;
+  text-align: center;
+  margin: 1px;
+}
